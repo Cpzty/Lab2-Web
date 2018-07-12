@@ -73,3 +73,29 @@
   border-style: ridge;
   box-sizing: border-box;
 }
+
+.btnTest{
+  width: 200px;
+  height: 200px;
+  visibility: hidden;
+ 
+}
+
+.circle{
+  background-image:url(../assets/O.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.x{
+  background-image: url(../assets/X.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  
+}
+
+.won{
+  pointer-events: none;
+}
