@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 .board{
   display: flex;
   width: 30rem;
@@ -100,3 +101,14 @@
   pointer-events: none;
 }
 
+.playertxt{
+  font-family: Comfortaa;
+}
+
+.title{
+  font-family: Comfortaa;
+}
+
+.btnReinicio{
+  font-family: Comfortaa;
+}

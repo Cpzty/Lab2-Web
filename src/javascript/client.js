@@ -58,6 +58,7 @@ ninethblock.className = "ninethblock";
 btnTest.className = "btnTest";
 playertxt.className = "playertxt";
 btnReinicio.className = "btnReinicio";  
+title.className = "title";
   //append a root
 root.appendChild(title);
 root.appendChild(totitoboard);
