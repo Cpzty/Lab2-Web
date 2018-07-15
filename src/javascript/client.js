@@ -285,7 +285,11 @@ secondblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
   }
-  
+
+  if(matrix[0][0]+matrix[0][1]+matrix[0][2]!=3  & matrix[0][0]+matrix[0][1]+matrix[0][2]!=0 & matrix[0][1]+matrix[1][1]+matrix[2][1]!=3 & matrix[0][1]+matrix[1][1]+matrix[2][1]!=0 &xcount==5){
+    console.log('empate');
+    playertxt.innerHTML = "Empate!";
+  }
 
 }
 thirdblock.onclick = () =>{
@@ -405,6 +409,9 @@ thirdblock.onclick = () =>{
      
   }
 
+  if(matrix[0][0]+matrix[0][1]+matrix[0][2]!=3 & matrix[0][0]+matrix[0][1]+matrix[0][2]!=0 & matrix[0][2]+matrix[1][2]+matrix[2][2]!=3 & matrix[0][2]+matrix[1][2]+matrix[2][2]!=0 & matrix[0][2]+matrix[1][1]+matrix[2][0]!=3 & matrix[0][2]+matrix[1][1]+matrix[2][0]!=0 &xcount==5){
+    playertxt.innerHTML = "Empate!"
+  }
   
   
 }
@@ -456,6 +463,9 @@ fourthblock.onclick = () =>{
     ninethblock.classList.add('won');
   }
   
+if(matrix[0][0]+matrix[1][0]+matrix[2][0]!=3 & matrix[0][0]+matrix[1][0]+matrix[2][0]!=0 & matrix[1][0]+matrix[1][1]+matrix[1][2]!=3 & matrix[1][0]+matrix[1][1]+matrix[1][2]!=0 &xcount==5) {
+  playertxt.innerHTML = "Empate!"
+} 
   
 }
 fifthblock.onclick = () =>{
@@ -588,7 +598,11 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
   }
-
+  
+  
+if(matrix[0][0]+matrix[1][1]+matrix[2][2]!=3&matrix[0][0]+matrix[1][1]+matrix[2][2]!=0&matrix[2][0]+matrix[1][1]+matrix[0][2]!=3&matrix[2][0]+matrix[1][1]+matrix[0][2]!=0&matrix[1][0]+matrix[1][1]+matrix[1][2]!=3&matrix[1][0]+matrix[1][1]+matrix[1][2]!=0&matrix[0][1]+matrix[1][1]+matrix[2][1]!=3&matrix[0][1]+matrix[1][1]+matrix[2][1]!=0&xcount==5){
+  playertxt.innerHTML = "Empate!";
+}
 
 }
 sixthblock.onclick = () =>{
@@ -667,7 +681,10 @@ sixthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
   }
-  
+
+if(matrix[1][0]+matrix[1][1]+matrix[1][2]!=3&matrix[1][0]+matrix[1][1]+matrix[1][2]!=0&matrix[0][2]+matrix[1][2]+matrix[2][2]!=3&matrix[0][2]+matrix[1][2]+matrix[2][2]!=0&xcount==5){
+  playertxt.innerHTML = "Empate!"
+}  
 
 }
 seventhblock.onclick = () =>{
@@ -749,7 +766,7 @@ seventhblock.onclick = () =>{
 
     if(matrix[2][0]==0 & matrix[1][1]==0 & matrix[0][2]==0){
     console.log('p2 won');
-    playertxt.innerHTML = "P1 won";
+    playertxt.innerHTML = "P2 won";
     firstblock.classList.add('won');
     secondblock.classList.add('won');
     thirdblock.classList.add('won');
@@ -774,7 +791,10 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
   }
-  
+
+if(matrix[0][0]+matrix[1][0]+matrix[2][0]!=3&matrix[0][0]+matrix[1][0]+matrix[2][0]!=0&matrix[2][0]+matrix[1][1]+matrix[0][2]!=3&matrix[2][0]+matrix[1][1]+matrix[0][2]!=0&matrix[2][0]+matrix[2][1]+matrix[2][2]!=3&matrix[2][0]+matrix[2][1]+matrix[2][2]!=0&xcount==5){
+  playertxt.innerHTML = "Empate!"
+}  
 
 }
 eigthblock.onclick = () =>{
@@ -854,6 +874,9 @@ eigthblock.onclick = () =>{
     ninethblock.classList.add('won');
   }
   
+if(matrix[2][0]+matrix[2][1]+matrix[2][2]!=3&matrix[2][0]+matrix[2][1]+matrix[2][2]!=0&matrix[0][1]+matrix[1][1]+matrix[2][1]!=3&matrix[0][1]+matrix[1][1]+matrix[2][1]!=0&xcount==5){
+  playertxt.innerHTML = "Empate!"
+}  
 
 }
 ninethblock.onclick = () =>{
@@ -959,6 +982,11 @@ ninethblock.onclick = () =>{
     seventhblock.classList.add('won');
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
+  }
+  
+  if(matrix[0][0]+matrix[1][1]+matrix[2][2]!=3&matrix[0][0]+matrix[1][1]+matrix[2][2]!=0&matrix[2][0]+matrix[2][1]+matrix[2][2]!=3&matrix[2][0]+matrix[2][1]+matrix[2][2]!=0&matrix[0][2]+matrix[1][2]+matrix[2][2]!=3&matrix[0][2]+matrix[1][2]+matrix[2][2]!=0&xcount==5){
+
+    playertxt.innerHTML = "Empate!"
   }
   
   
