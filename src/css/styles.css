@@ -99,3 +99,7 @@
 .won{
   pointer-events: none;
 }
+
+.playertxt{
+  display: block;
+}

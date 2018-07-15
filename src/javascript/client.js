@@ -21,9 +21,10 @@ const sixthblock = document.createElement('div');
 const seventhblock = document.createElement('div');
 const eigthblock = document.createElement('div');
 const ninethblock = document.createElement('div');
- 
+ //texto jugador y ganar
+const playertxt = document.createElement('h2');
 
-
+//indica el turno del jugador
 let player = 0;
 
 const render = ({figures, currentplayer}) => {
@@ -38,6 +39,8 @@ const render = ({figures, currentplayer}) => {
   //inner html
 title.innerHTML = "Totito";
 btnTest.innerHTML = "Push";  
+playertxt.innerHTML = "P1 turn" ; 
+  
 //class name
 totitoboard.className = "board";
 firstblock.className = "firstblock";
@@ -50,11 +53,14 @@ seventhblock.className = "seventhblock";
 eigthblock.className = "eigthblock";
 ninethblock.className = "ninethblock";
 btnTest.className = "btnTest";
-
+playertxt.className = "playertxt";
   
-  //append
+  //append a root
 root.appendChild(title);
 root.appendChild(totitoboard);
+//root.appendChild(btnTest);
+root.appendChild(playertxt);
+  //append a totitoboard
 totitoboard.appendChild(firstblock);
 totitoboard.appendChild(secondblock);
 totitoboard.appendChild(thirdblock);
@@ -64,7 +70,6 @@ totitoboard.appendChild(sixthblock);
 totitoboard.appendChild(seventhblock);
 totitoboard.appendChild(eigthblock);
 totitoboard.appendChild(ninethblock);
-root.appendChild(btnTest);
 
 
   
@@ -76,7 +81,7 @@ btnTest.onclick = () =>{
   if(player == 0){
       firstblock.classList.add('x');
     player= 1;
-    console.log(player);
+    //console.log(player);
   }
   
   
@@ -91,11 +96,12 @@ btnTest.onclick = () =>{
 
 firstblock.onclick = () =>{
     if(player == 0){
-      firstblock.classList.add('x');
+    firstblock.classList.add('x');
     player= 1;
-    console.log(player);
-      matrix[0][0]=1;
-      xcount = xcount+1;
+    //console.log(player);
+    playertxt.innerHTML = "P2 turn";
+    matrix[0][0]=1;
+    xcount = xcount+1;
   }
   
   
@@ -103,11 +109,13 @@ firstblock.onclick = () =>{
     firstblock.classList.add('circle');
     
     player =0;
-    console.log(player);
-          matrix[0][0]=0;
+    //console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[0][0]=0;
   }
   if(matrix[0][0]==1 & matrix[0][1]==1 & matrix[0][2]==1){
     console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
     firstblock.classList.add('won');
     secondblock.classList.add('won');
     thirdblock.classList.add('won');
@@ -119,8 +127,86 @@ firstblock.onclick = () =>{
     ninethblock.classList.add('won');
   }
   
-  if(matrix[0][0]+matrix[0][1]+matrix[0][2]!=3 & matrix[0][0]+matrix[0][1]+matrix[0][2]!=0 &xcount==5){
+if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+  
+  
+  if(matrix[0][0]==1 & matrix[1][1]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+//check p2 won
+    if(matrix[0][0]==0 & matrix[0][1]==0 & matrix[0][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+  
+  
+  if(matrix[0][0]==0 & matrix[1][1]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+  
+  //empate se dispara si no hay una fila o columna o cruzado de x o circulo
+  if(matrix[0][0]+matrix[0][1]+matrix[0][2]!=3 & matrix[0][0]+matrix[0][1]+matrix[0][2]!=0 &matrix[0][0]+matrix[1][0]+matrix[2][0]!=3&matrix[0][0]+matrix[1][0]+matrix[2][0]!=0 &matrix[0][0]+matrix[1][1]+matrix[2][2]!=3&matrix[0][0]+matrix[1][1]+matrix[2][2]!=0 &xcount==5){
     console.log('empate');
+    playertxt.innerHTML = "Empate!";
   }
   
 }
@@ -128,7 +214,8 @@ secondblock.onclick = () =>{
     if(player == 0){
       secondblock.classList.add('x');
     player= 1;
-    console.log(player);
+    //console.log(player);
+    playertxt.innerHTML = "P2 turn";
     matrix[0][1]=1;
     xcount = xcount+1;
   }
@@ -138,12 +225,56 @@ secondblock.onclick = () =>{
     secondblock.classList.add('circle');
     
     player =0;
-    console.log(player);
+    //console.log(player);
+    playertxt.innerHTML = "P1 turn";
     matrix[0][1]=0;
   }
   
    if(matrix[0][0]==1 & matrix[0][1]==1 & matrix[0][2]==1){
     console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+     if(matrix[0][1]==1 & matrix[1][1]==1 & matrix[2][1]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+   if(matrix[0][0]==0 & matrix[0][1]==0 & matrix[0][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+     if(matrix[0][1]==0 & matrix[1][1]==0 & matrix[2][1]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
     firstblock.classList.add('won');
     secondblock.classList.add('won');
     thirdblock.classList.add('won');
@@ -162,6 +293,7 @@ thirdblock.onclick = () =>{
       thirdblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
     matrix[0][2]=1;
     xcount = xcount+1;
 
@@ -172,31 +304,117 @@ thirdblock.onclick = () =>{
     thirdblock.classList.add('circle');
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
     matrix[0][2]=0;
     
   }
   
    if(matrix[0][0]==1 & matrix[0][1]==1 & matrix[0][2]==1){
     console.log('p1 won');
-     firstblock.classList.add('won');
-     secondblock.classList.add('won');
-     thirdblock.classList.add('won');
-     fourthblock.classList.add('won');
-     fifthblock.classList.add('won');
-     sixthblock.classList.add('won');
-     seventhblock.classList.add('won');
-     eigthblock.classList.add('won');
-     ninethblock.classList.add('won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+          
+     
+  }
+  
+     if(matrix[0][2]==1 & matrix[1][2]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
           
      
   }
 
+     if(matrix[0][2]==1 & matrix[1][1]==1 & matrix[2][0]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+          
+     
+  }
+
+   if(matrix[0][0]==0 & matrix[0][1]==0 & matrix[0][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+          
+     
+  }
+  
+     if(matrix[0][2]==0 & matrix[1][2]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+          
+     
+  }
+
+     if(matrix[0][2]==0 & matrix[1][1]==0 & matrix[2][0]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+          
+     
+  }
+
+  
+  
 }
 fourthblock.onclick = () =>{
     if(player == 0){
-      fourthblock.classList.add('x');
+    fourthblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
+    matrix[1][0] = 1;
     xcount = xcount+1;
   }
   
@@ -206,15 +424,48 @@ fourthblock.onclick = () =>{
     
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[1][0] = 0;
+  }
+  
+  if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
   }
 
+  if(matrix[1][0]==1 & matrix[1][1]==1 & matrix[1][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+  
 }
 fifthblock.onclick = () =>{
     if(player == 0){
       fifthblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
     xcount = xcount+1;
+    matrix[1][1] = 1;
   }
   
   
@@ -223,14 +474,18 @@ fifthblock.onclick = () =>{
     
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[1][1] = 0;
   }
 
 }
 sixthblock.onclick = () =>{
     if(player == 0){
-      sixthblock.classList.add('x');
+    sixthblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
+    matrix[1][2] = 1;
     xcount = xcount+1;
   }
   
@@ -240,6 +495,9 @@ sixthblock.onclick = () =>{
     
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[1][2] = 0;
+
   }
 
 }
@@ -248,6 +506,8 @@ seventhblock.onclick = () =>{
       seventhblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
+    matrix[2][0] = 1;
     xcount = xcount+1;
 
   }
@@ -258,6 +518,8 @@ seventhblock.onclick = () =>{
     
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[2][0] = 0;
   }
 
 }
@@ -266,6 +528,8 @@ eigthblock.onclick = () =>{
       eigthblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
+    matrix[2][1]=1;
     xcount = xcount+1;
 
   }
@@ -276,6 +540,8 @@ eigthblock.onclick = () =>{
     
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[2][1]=0;
   }
 
 }
@@ -284,16 +550,20 @@ ninethblock.onclick = () =>{
       ninethblock.classList.add('x');
     player= 1;
     console.log(player);
+    playertxt.innerHTML = "P2 turn";
     xcount = xcount+1;
+    matrix[2][2] = 1;
 
   }
   
   
   else if(player ==1){
     ninethblock.classList.add('circle');
-    
     player =0;
     console.log(player);
+    playertxt.innerHTML = "P1 turn";
+    matrix[2][2] = 0;
+
   }
 
 }
