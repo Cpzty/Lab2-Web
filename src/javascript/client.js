@@ -471,12 +471,124 @@ fifthblock.onclick = () =>{
   
   else if(player ==1){
     fifthblock.classList.add('circle');
-    
     player =0;
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[1][1] = 0;
   }
+  
+    if(matrix[0][0]==1 & matrix[1][1]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+    if(matrix[2][0]==1 & matrix[1][1]==1 & matrix[0][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[1][0]==1 & matrix[1][1]==1 & matrix[1][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+    if(matrix[0][1]==1 & matrix[1][1]==1 & matrix[2][1]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[0][0]==0 & matrix[1][1]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+    if(matrix[2][0]==0 & matrix[1][1]==0 & matrix[0][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[1][0]==0 & matrix[1][1]==0 & matrix[1][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+    if(matrix[0][1]==0 & matrix[1][1]==0 & matrix[2][1]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
 
 }
 sixthblock.onclick = () =>{
@@ -499,6 +611,63 @@ sixthblock.onclick = () =>{
     matrix[1][2] = 0;
 
   }
+  
+    if(matrix[0][2]==1 & matrix[1][2]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[1][0]==1 & matrix[1][1]==1 & matrix[1][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[0][2]==0 & matrix[1][2]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[1][0]==0 & matrix[1][1]==0 & matrix[1][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
 
 }
 seventhblock.onclick = () =>{
@@ -521,6 +690,91 @@ seventhblock.onclick = () =>{
     playertxt.innerHTML = "P1 turn";
     matrix[2][0] = 0;
   }
+  
+    if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][0]==1 & matrix[1][1]==1 & matrix[0][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][0]==1 & matrix[2][1]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][0]==0 & matrix[1][1]==0 & matrix[0][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][0]==0 & matrix[2][1]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
 
 }
 eigthblock.onclick = () =>{
@@ -543,6 +797,63 @@ eigthblock.onclick = () =>{
     playertxt.innerHTML = "P1 turn";
     matrix[2][1]=0;
   }
+  
+    if(matrix[2][0]==1 & matrix[2][1]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][1]==1 & matrix[1][1]==1 & matrix[0][1]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][0]==0 & matrix[2][1]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][1]==0 & matrix[1][1]==0 & matrix[0][1]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
 
 }
 ninethblock.onclick = () =>{
@@ -565,7 +876,92 @@ ninethblock.onclick = () =>{
     matrix[2][2] = 0;
 
   }
+  
+    if(matrix[2][0]==1 & matrix[2][1]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
 
+    if(matrix[0][0]==1 & matrix[1][1]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+    if(matrix[0][2]==1 & matrix[1][2]==1 & matrix[2][2]==1){
+    console.log('p1 won');
+    playertxt.innerHTML = "P1 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[2][0]==0 & matrix[2][1]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+
+    if(matrix[0][0]==0 & matrix[1][1]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+    if(matrix[0][2]==0 & matrix[1][2]==0 & matrix[2][2]==0){
+    console.log('p2 won');
+    playertxt.innerHTML = "P2 won";
+    firstblock.classList.add('won');
+    secondblock.classList.add('won');
+    thirdblock.classList.add('won');
+    fourthblock.classList.add('won');
+    fifthblock.classList.add('won');
+    sixthblock.classList.add('won');
+    seventhblock.classList.add('won');
+    eigthblock.classList.add('won');
+    ninethblock.classList.add('won');
+  }
+  
+  
 }
 
 
