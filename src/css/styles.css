@@ -17,6 +17,43 @@
   box-sizing: border-box;
 }
 
+.firstblock:hover{
+  cursor: pointer;
+}
+
+.secondblock:hover{
+  cursor: pointer;
+}
+
+.thirdblock:hover{
+  cursor: pointer;
+}
+
+.fourthblock:hover{
+  cursor: pointer;
+}
+
+.fifthblock:hover{
+  cursor: pointer;
+}
+
+.sixthblock:hover{
+  cursor: pointer;
+}
+
+.seventhblock:hover{
+  cursor: pointer;
+}
+
+.eigthblock:hover{
+  cursor: pointer;
+}
+
+.ninethblock:hover{
+  cursor: pointer;
+}
+
+
 .secondblock{
   width: 10rem;
   height: 10rem;
