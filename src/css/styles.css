@@ -132,3 +132,7 @@
   font-family: Comfortaa;
   border-radius: 10px;
 }
+
+.btnReinicio:hover{
+  cursor: pointer;
+}
