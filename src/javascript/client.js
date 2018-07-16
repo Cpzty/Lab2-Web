@@ -27,6 +27,9 @@ const ninethblock = document.createElement('div');
  //texto jugador y ganar
 const playertxt = document.createElement('h2');
 
+//imagen para que se vea bien con el texto
+const ximg = document.createElement('div');
+
 //indica el turno del jugador
 let player = 0;
 
@@ -59,11 +62,14 @@ btnTest.className = "btnTest";
 playertxt.className = "playertxt";
 btnReinicio.className = "btnReinicio";  
 title.className = "title";
+
+ximg.className = "ximg";  
   //append a root
 root.appendChild(title);
 root.appendChild(totitoboard);
 //root.appendChild(btnTest);
-root.appendChild(playertxt);
+ximg.appendChild(playertxt);
+root.appendChild(ximg);
 //append botonreinicio
 root.appendChild(btnReinicio);
   //append a totitoboard
@@ -125,7 +131,8 @@ btnReinicio.onclick = () =>{
   matrix[0] = [2,2,2];
   matrix[1] = [2,2,2];
   matrix[2] = [2,2,2];
-
+  ximg.classList.add("ximg");
+  btnReinicio.innerHTML = "Reiniciar";
 
 }
 
@@ -154,6 +161,8 @@ firstblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[0][0]=1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
   }
   
   
@@ -164,6 +173,8 @@ firstblock.onclick = () =>{
     //console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[0][0]=0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
   }
   if(matrix[0][0]==1 & matrix[0][1]==1 & matrix[0][2]==1){
     console.log('p1 won');
@@ -178,6 +189,8 @@ firstblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
 if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
@@ -193,6 +206,8 @@ if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
   
@@ -210,6 +225,8 @@ if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
 
 //check p2 won
@@ -226,6 +243,8 @@ if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
 if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
@@ -241,6 +260,8 @@ if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
   
@@ -258,6 +279,8 @@ if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
 
   
@@ -266,6 +289,8 @@ if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
     console.log('empate');
     playertxt.innerHTML = "Empate!";
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
 }
@@ -277,6 +302,9 @@ secondblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[0][1]=1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
+
   }
   
   
@@ -287,6 +315,9 @@ secondblock.onclick = () =>{
     //console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[0][1]=0;
+    ximg.classList.add("ximg");
+   ximg.classList.remove("oimg");
+
   }
   
    if(matrix[0][0]==1 & matrix[0][1]==1 & matrix[0][2]==1){
@@ -302,6 +333,8 @@ secondblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
      if(matrix[0][1]==1 & matrix[1][1]==1 & matrix[2][1]==1){
@@ -317,6 +350,8 @@ secondblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");   
   }
   
    if(matrix[0][0]==0 & matrix[0][1]==0 & matrix[0][2]==0){
@@ -332,6 +367,8 @@ secondblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg"); 
   }
   
      if(matrix[0][1]==0 & matrix[1][1]==0 & matrix[2][1]==0){
@@ -347,12 +384,16 @@ secondblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");   
   }
 
   if(matrix[0][0]+matrix[0][1]+matrix[0][2]!=3  & matrix[0][0]+matrix[0][1]+matrix[0][2]!=0 & matrix[0][1]+matrix[1][1]+matrix[2][1]!=3 & matrix[0][1]+matrix[1][1]+matrix[2][1]!=0 &xcount==5){
     console.log('empate');
     playertxt.innerHTML = "Empate!";
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
 
 }
@@ -364,6 +405,8 @@ thirdblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[0][2]=1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");  
 
   }
   
@@ -374,6 +417,8 @@ thirdblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[0][2]=0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
     
   }
   
@@ -390,7 +435,8 @@ thirdblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";      
-     
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
      if(matrix[0][2]==1 & matrix[1][2]==1 & matrix[2][2]==1){
@@ -406,7 +452,8 @@ thirdblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
-          
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");      
      
   }
 
@@ -423,7 +470,8 @@ thirdblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
-     
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg"); 
   }
 
    if(matrix[0][0]==0 & matrix[0][1]==0 & matrix[0][2]==0){
@@ -439,7 +487,8 @@ thirdblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";      
-     
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg"); 
   }
   
      if(matrix[0][2]==0 & matrix[1][2]==0 & matrix[2][2]==0){
@@ -455,7 +504,8 @@ thirdblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";      
-     
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg"); 
   }
 
      if(matrix[0][2]==0 & matrix[1][1]==0 & matrix[2][0]==0){
@@ -471,12 +521,15 @@ thirdblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";      
-     
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg"); 
   }
 
   if(matrix[0][0]+matrix[0][1]+matrix[0][2]!=3 & matrix[0][0]+matrix[0][1]+matrix[0][2]!=0 & matrix[0][2]+matrix[1][2]+matrix[2][2]!=3 & matrix[0][2]+matrix[1][2]+matrix[2][2]!=0 & matrix[0][2]+matrix[1][1]+matrix[2][0]!=3 & matrix[0][2]+matrix[1][1]+matrix[2][0]!=0 &xcount==5){
     playertxt.innerHTML = "Empate!"
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
   
@@ -489,6 +542,9 @@ fourthblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[1][0] = 1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
+  
   }
   
   
@@ -499,6 +555,9 @@ fourthblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[1][0] = 0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
+
   }
   
   if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
@@ -514,6 +573,8 @@ fourthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
 
   if(matrix[1][0]==1 & matrix[1][1]==1 & matrix[1][2]==1){
@@ -529,11 +590,15 @@ fourthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
 if(matrix[0][0]+matrix[1][0]+matrix[2][0]!=3 & matrix[0][0]+matrix[1][0]+matrix[2][0]!=0 & matrix[1][0]+matrix[1][1]+matrix[1][2]!=3 & matrix[1][0]+matrix[1][1]+matrix[1][2]!=0 &xcount==5) {
   playertxt.innerHTML = "Empate!"
   btnReinicio.innerHTML = "Nueva Partida";
+  ximg.classList.remove("ximg");
+  ximg.classList.remove("oimg");
 } 
   
 }
@@ -545,6 +610,9 @@ fifthblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     xcount = xcount+1;
     matrix[1][1] = 1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
+  
   }
   
   
@@ -554,6 +622,9 @@ fifthblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[1][1] = 0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
+
   }
   
     if(matrix[0][0]==1 & matrix[1][1]==1 & matrix[2][2]==1){
@@ -569,6 +640,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
     if(matrix[2][0]==1 & matrix[1][1]==1 & matrix[0][2]==1){
@@ -584,6 +657,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[1][0]==1 & matrix[1][1]==1 & matrix[1][2]==1){
@@ -599,6 +674,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
     if(matrix[0][1]==1 & matrix[1][1]==1 & matrix[2][1]==1){
@@ -614,6 +691,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[0][0]==0 & matrix[1][1]==0 & matrix[2][2]==0){
@@ -629,6 +708,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
     if(matrix[2][0]==0 & matrix[1][1]==0 & matrix[0][2]==0){
@@ -644,6 +725,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[1][0]==0 & matrix[1][1]==0 & matrix[1][2]==0){
@@ -659,6 +742,8 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
     if(matrix[0][1]==0 & matrix[1][1]==0 & matrix[2][1]==0){
@@ -674,12 +759,16 @@ fifthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
   
 if(matrix[0][0]+matrix[1][1]+matrix[2][2]!=3&matrix[0][0]+matrix[1][1]+matrix[2][2]!=0&matrix[2][0]+matrix[1][1]+matrix[0][2]!=3&matrix[2][0]+matrix[1][1]+matrix[0][2]!=0&matrix[1][0]+matrix[1][1]+matrix[1][2]!=3&matrix[1][0]+matrix[1][1]+matrix[1][2]!=0&matrix[0][1]+matrix[1][1]+matrix[2][1]!=3&matrix[0][1]+matrix[1][1]+matrix[2][1]!=0&xcount==5){
   playertxt.innerHTML = "Empate!";
   btnReinicio.innerHTML = "Nueva Partida";
+  ximg.classList.remove("ximg");
+  ximg.classList.remove("oimg");
 }
 
 }
@@ -691,6 +780,9 @@ sixthblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[1][2] = 1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
+  
   }
   
   
@@ -701,6 +793,8 @@ sixthblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[1][2] = 0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
 
   }
   
@@ -717,6 +811,8 @@ sixthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[1][0]==1 & matrix[1][1]==1 & matrix[1][2]==1){
@@ -732,6 +828,8 @@ sixthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[0][2]==0 & matrix[1][2]==0 & matrix[2][2]==0){
@@ -747,6 +845,8 @@ sixthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[1][0]==0 & matrix[1][1]==0 & matrix[1][2]==0){
@@ -762,11 +862,15 @@ sixthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
 if(matrix[1][0]+matrix[1][1]+matrix[1][2]!=3&matrix[1][0]+matrix[1][1]+matrix[1][2]!=0&matrix[0][2]+matrix[1][2]+matrix[2][2]!=3&matrix[0][2]+matrix[1][2]+matrix[2][2]!=0&xcount==5){
   playertxt.innerHTML = "Empate!"
   btnReinicio.innerHTML = "Nueva Partida";
+  ximg.classList.remove("ximg");
+  ximg.classList.remove("oimg");
 }  
 
 }
@@ -778,6 +882,8 @@ seventhblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[2][0] = 1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");  
 
   }
   
@@ -789,6 +895,9 @@ seventhblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[2][0] = 0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
+
   }
   
     if(matrix[0][0]==1 & matrix[1][0]==1 & matrix[2][0]==1){
@@ -804,6 +913,8 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][0]==1 & matrix[1][1]==1 & matrix[0][2]==1){
@@ -819,6 +930,8 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][0]==1 & matrix[2][1]==1 & matrix[2][2]==1){
@@ -834,6 +947,8 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[0][0]==0 & matrix[1][0]==0 & matrix[2][0]==0){
@@ -849,6 +964,8 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][0]==0 & matrix[1][1]==0 & matrix[0][2]==0){
@@ -864,6 +981,8 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][0]==0 & matrix[2][1]==0 & matrix[2][2]==0){
@@ -879,11 +998,15 @@ seventhblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
 if(matrix[0][0]+matrix[1][0]+matrix[2][0]!=3&matrix[0][0]+matrix[1][0]+matrix[2][0]!=0&matrix[2][0]+matrix[1][1]+matrix[0][2]!=3&matrix[2][0]+matrix[1][1]+matrix[0][2]!=0&matrix[2][0]+matrix[2][1]+matrix[2][2]!=3&matrix[2][0]+matrix[2][1]+matrix[2][2]!=0&xcount==5){
   playertxt.innerHTML = "Empate!"
   btnReinicio.innerHTML = "Nueva Partida";
+  ximg.classList.remove("ximg");
+  ximg.classList.remove("oimg");
 }  
 
 }
@@ -895,6 +1018,9 @@ eigthblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     matrix[2][1]=1;
     xcount = xcount+1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
+  
 
   }
   
@@ -906,6 +1032,8 @@ eigthblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[2][1]=0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
   }
   
     if(matrix[2][0]==1 & matrix[2][1]==1 & matrix[2][2]==1){
@@ -921,6 +1049,8 @@ eigthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][1]==1 & matrix[1][1]==1 & matrix[0][1]==1){
@@ -936,6 +1066,8 @@ eigthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][0]==0 & matrix[2][1]==0 & matrix[2][2]==0){
@@ -951,6 +1083,8 @@ eigthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][1]==0 & matrix[1][1]==0 & matrix[0][1]==0){
@@ -966,11 +1100,15 @@ eigthblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
 if(matrix[2][0]+matrix[2][1]+matrix[2][2]!=3&matrix[2][0]+matrix[2][1]+matrix[2][2]!=0&matrix[0][1]+matrix[1][1]+matrix[2][1]!=3&matrix[0][1]+matrix[1][1]+matrix[2][1]!=0&xcount==5){
   playertxt.innerHTML = "Empate!"
   btnReinicio.innerHTML = "Nueva Partida";
+  ximg.classList.remove("ximg");
+  ximg.classList.remove("oimg");
 }  
 
 }
@@ -982,6 +1120,9 @@ ninethblock.onclick = () =>{
     playertxt.innerHTML = "P2 turn";
     xcount = xcount+1;
     matrix[2][2] = 1;
+    ximg.classList.add("oimg");
+    ximg.classList.remove("ximg");
+  
 
   }
   
@@ -992,6 +1133,9 @@ ninethblock.onclick = () =>{
     console.log(player);
     playertxt.innerHTML = "P1 turn";
     matrix[2][2] = 0;
+    ximg.classList.add("ximg");
+    ximg.classList.remove("oimg");
+
 
   }
   
@@ -1008,6 +1152,8 @@ ninethblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[0][0]==1 & matrix[1][1]==1 & matrix[2][2]==1){
@@ -1023,6 +1169,8 @@ ninethblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
     if(matrix[0][2]==1 & matrix[1][2]==1 & matrix[2][2]==1){
@@ -1038,6 +1186,8 @@ ninethblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[2][0]==0 & matrix[2][1]==0 & matrix[2][2]==0){
@@ -1053,6 +1203,8 @@ ninethblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
 
     if(matrix[0][0]==0 & matrix[1][1]==0 & matrix[2][2]==0){
@@ -1068,6 +1220,8 @@ ninethblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
     if(matrix[0][2]==0 & matrix[1][2]==0 & matrix[2][2]==0){
@@ -1083,12 +1237,16 @@ ninethblock.onclick = () =>{
     eigthblock.classList.add('won');
     ninethblock.classList.add('won');
     btnReinicio.innerHTML = "Nueva Partida";  
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");  
   }
   
   if(matrix[0][0]+matrix[1][1]+matrix[2][2]!=3&matrix[0][0]+matrix[1][1]+matrix[2][2]!=0&matrix[2][0]+matrix[2][1]+matrix[2][2]!=3&matrix[2][0]+matrix[2][1]+matrix[2][2]!=0&matrix[0][2]+matrix[1][2]+matrix[2][2]!=3&matrix[0][2]+matrix[1][2]+matrix[2][2]!=0&xcount==5){
 
     playertxt.innerHTML = "Empate!"
     btnReinicio.innerHTML = "Nueva Partida";
+    ximg.classList.remove("ximg");
+    ximg.classList.remove("oimg");
   }
   
   

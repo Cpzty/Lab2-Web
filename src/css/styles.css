@@ -97,6 +97,25 @@
   
 }
 
+.ximg{
+  
+  background-image: url(../assets/X.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  height:auto;
+  background-size: 25px 25px;
+  background-position: center;
+}
+
+.oimg{
+  background-image: url(../assets/O.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  height:auto;
+  background-size: 25px 25px;
+  background-position: center;
+}
+
 .won{
   pointer-events: none;
 }
@@ -111,4 +130,5 @@
 
 .btnReinicio{
   font-family: Comfortaa;
+  border-radius: 10px;
 }
